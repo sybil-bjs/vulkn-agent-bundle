@@ -23,9 +23,9 @@ git clone https://github.com/sybil-bjs/vulkn-agent-bundle.git .bundle && cp -r .
 - `FIRECRAWL_API_KEY`: For advanced research.
 
 ### Telephony (Twilio)
-- `TWILIO_ACCOUNT_SID`: Your account identifier.
-- `TWILIO_AUTH_TOKEN`: Your secret auth token.
-- `TWILIO_PHONE_NUMBER`: The VULKN number (+1...).
+- `TWILIO_ACCOUNT_SID`: `[See VULKN Secure Vault]`
+- `TWILIO_AUTH_TOKEN`: `[See VULKN Secure Vault]`
+- `TWILIO_PHONE_NUMBER`: `[See VULKN Secure Vault]`
 
 ### Social & Automation (ManyChat)
 - `MANYCHAT_API_KEY`: Format `123456:abcdef...`
