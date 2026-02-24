@@ -8,6 +8,8 @@ This repository contains the standard "Battle-Ready" skills for VULKN cloud agen
 3. **Summarize:** Multimodal video/URL analysis and transcription.
 4. **Veo Gen:** Official Google Veo 3.1 video generation.
 5. **Firecrawl:** Advanced search and markdown extraction.
+6. **Twilio Voice & SMS:** Telephony interface for calls and reminders.
+7. **ManyChat Bridge:** Bridge to Facebook/Instagram DM automation.
 
 ## 🛠️ Installation
 Run this one-liner in your `~/.openclaw/workspace/skills` directory:
@@ -16,7 +18,20 @@ git clone https://github.com/sybil-bjs/vulkn-agent-bundle.git .bundle && cp -r .
 ```
 
 ## 🔑 Required Keys (Add to your .env)
+### Core AI
 - `GEMINI_API_KEY`: For Images, Video, and Veo.
 - `FIRECRAWL_API_KEY`: For advanced research.
-- `TWILIO_ACCOUNT_SID` / `TWILIO_AUTH_TOKEN`: For voice and SMS.
-- `MANYCHAT_API_KEY`: For DM automation.
+
+### Telephony (Twilio)
+- `TWILIO_ACCOUNT_SID`: Your account identifier.
+- `TWILIO_AUTH_TOKEN`: Your secret auth token.
+- `TWILIO_PHONE_NUMBER`: The VULKN number (+1...).
+
+### Social & Automation (ManyChat)
+- `MANYCHAT_API_KEY`: Format `123456:abcdef...`
+- `MANYCHAT_BASE_URL`: Usually `https://api.manychat.com/fb/` for v1.
+
+## 🚀 Usage Tips
+- **Twilio:** Use the `twilio` CLI or the `twilio-voice` skill for phone calls.
+- **ManyChat:** Use the `/fb/page/getInfo` endpoint to verify connectivity.
+- **Google:** Always specify the `subject` email if using Domain-Wide Delegation.
